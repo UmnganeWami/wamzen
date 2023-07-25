@@ -1,19 +1,26 @@
 package wamzen;
+import hxd.res.BitmapFont;
 import h2d.RenderContext;
 import h2d.Object;
 import hxd.res.DefaultFont;
-import h2d.Text;
+import wamzen.Text;
 import h2d.Interactive;
 import hxd.Cursor;
+import hxd.res.Font;
+
 class Button extends Interactive {
     var text:Text;
     //var onPressed:Void->Void;
-    public function new(width:Float, height:Float, textText:String, cursor:Cursor = Default, ?parent:Null<Null<Object>>, ?shape:Null<Null<h2d.col.Collider>>){
+    public function new(width:Float, height:Float, textText:String, cursor:Cursor = Default, ?parent:Object, ?shape:h2d.col.Collider){
         super(width, height, parent, shape);
-        text = new Text(DefaultFont.get());
+        text = new Text(null);
         text.text = textText;
         text.textAlign = Center;
         addChild(text);
+    }
+
+    public function setButtonFont(?font:BitmapFont, ?color:Int = 0xFFFFFF){
+        text.setFont(font, color);
     }
 
     override function draw(ctx:RenderContext) {//use draw cus fuck you it works i guess
