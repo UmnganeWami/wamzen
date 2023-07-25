@@ -3,11 +3,11 @@
     "url" : "https://github.com/jasononeil/useless/",
     "license": "MIT",
     "tags": ["cross", "useless"],
-    "description": "This library is useless in the same way on every platform.",
+    "description": "Does stuff :3.",
     "version": "1.0.0",
     "classPath": "src/",
     "releasenote": "Initial release, everything is working correctly.",
-    "contributors": ["Umngane Wami"],
+    "contributors": ["Umngane_Wami"],
     "dependencies": {
       "heaps": "",
       "heaps-aseprite": ""
